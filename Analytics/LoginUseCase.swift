@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class LoginUseCase {
+protocol LoginUseCaseOutput {
+    func login()
+}
+
+final class LoginUseCase: LoginUseCaseOutput {
     
     func login() {
         print("Login success!")
