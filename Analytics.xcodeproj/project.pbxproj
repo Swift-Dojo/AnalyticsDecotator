@@ -13,6 +13,8 @@
 		F280BB4F266C172A0056E894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F280BB4D266C172A0056E894 /* Main.storyboard */; };
 		F280BB51266C172B0056E894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F280BB50266C172B0056E894 /* Assets.xcassets */; };
 		F280BB54266C172B0056E894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F280BB52266C172B0056E894 /* LaunchScreen.storyboard */; };
+		F280BB5C266C176F0056E894 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280BB5B266C176F0056E894 /* LoginUseCase.swift */; };
+		F280BB5E266C190C0056E894 /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280BB5D266C190C0056E894 /* AnalyticsTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F280BB50266C172B0056E894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F280BB53266C172B0056E894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F280BB55266C172B0056E894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F280BB5B266C176F0056E894 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		F280BB5D266C190C0056E894 /* AnalyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				F280BB47266C172A0056E894 /* AppDelegate.swift */,
 				F280BB49266C172A0056E894 /* SceneDelegate.swift */,
 				F280BB4B266C172A0056E894 /* ViewController.swift */,
+				F280BB5B266C176F0056E894 /* LoginUseCase.swift */,
+				F280BB5D266C190C0056E894 /* AnalyticsTracker.swift */,
 				F280BB4D266C172A0056E894 /* Main.storyboard */,
 				F280BB50266C172B0056E894 /* Assets.xcassets */,
 				F280BB52266C172B0056E894 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 				F280BB4C266C172A0056E894 /* ViewController.swift in Sources */,
 				F280BB48266C172A0056E894 /* AppDelegate.swift in Sources */,
 				F280BB4A266C172A0056E894 /* SceneDelegate.swift in Sources */,
+				F280BB5E266C190C0056E894 /* AnalyticsTracker.swift in Sources */,
+				F280BB5C266C176F0056E894 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
