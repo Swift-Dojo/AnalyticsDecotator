@@ -10,7 +10,6 @@ import UIKit
 final class ViewController: UIViewController {
     
     private let loginUseCase = LoginUseCase()
-    private let analyticTracker = AnalyticsTracker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +17,5 @@ final class ViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         loginUseCase.login()
-        analyticTracker.track(analyticKey: "login analytic")
     }
 }
-

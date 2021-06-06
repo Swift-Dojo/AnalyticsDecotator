@@ -8,8 +8,10 @@
 import Foundation
 
 final class LoginUseCase {
+    private let analyticTracker = AnalyticsTracker()
     
     func login() {
         print("Login success!")
+        analyticTracker.track(analyticKey: "login analytic")
     }
 }
