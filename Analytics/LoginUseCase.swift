@@ -7,13 +7,27 @@
 
 import Foundation
 
-protocol LoginUseCaseOutput {
+protocol LoginLoader {
     func login()
 }
 
-final class LoginUseCase: LoginUseCaseOutput {
-    
+final class LoginUseCase: LoginLoader {
     func login() {
         print("Login success!")
+    }
+}
+
+final class LoginUseCaseDecorator: LoginLoader {
+    private let decoratee: LoginUseCase
+    private let analyticsTracker: AnalyticsTracker
+    
+    init(decoratee: LoginUseCase, analyticsTracker: AnalyticsTracker) {
+        self.decoratee = decoratee
+        self.analyticsTracker = analyticsTracker
+    }
+    
+    func login() {
+        decoratee.login()
+        analyticsTracker.track(analyticKey: "login tracker")
     }
 }

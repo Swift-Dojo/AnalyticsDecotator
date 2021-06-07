@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let loginUseCase = LoginUseCase()
         let analyticsTracker = AnalyticsTracker()
-        viewController.loginUseCase = LoginUseCaseDecorator(decoratee: loginUseCase, 
-                                                            analyticsTracker: analyticsTracker)
+        
+        viewController.loginUseCase = LoginUseCaseDecorator(decoratee: loginUseCase, analyticsTracker: analyticsTracker)
         
         self.window = UIWindow(windowScene: scene)
         self.window?.makeKeyAndVisible()
@@ -29,17 +29,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
-final class LoginUseCaseDecorator: LoginUseCaseOutput {
-    private let decoratee: LoginUseCaseOutput
-    private let analyticsTracker: AnalyticsTracker
-    
-    init(decoratee: LoginUseCaseOutput, analyticsTracker: AnalyticsTracker) {
-        self.decoratee = decoratee
-        self.analyticsTracker = analyticsTracker
-    }
-    
-    func login() {
-        analyticsTracker.track(analyticKey: "login analytic")
-        decoratee.login()
-    }
-}

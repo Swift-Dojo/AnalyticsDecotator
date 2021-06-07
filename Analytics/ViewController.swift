@@ -9,7 +9,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    var loginUseCase: LoginUseCaseOutput?
+    var loginUseCase: LoginLoader?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +19,3 @@ final class ViewController: UIViewController {
         loginUseCase?.login()
     }
 }
-
