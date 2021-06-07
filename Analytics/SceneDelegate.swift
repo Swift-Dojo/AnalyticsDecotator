@@ -18,6 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let viewController: ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
         
+        let loginUseCase = LoginUseCase()
+        let analyticsTracker = AnalyticsTracker()
+        
+        viewController.loginUseCase = LoginUseCaseDecorator(decoratee: loginUseCase, analyticsTracker: analyticsTracker)
+        
         self.window = UIWindow(windowScene: scene)
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController = viewController

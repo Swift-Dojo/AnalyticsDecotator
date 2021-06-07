@@ -9,13 +9,13 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    private let loginUseCase = LoginUseCase()
+    var loginUseCase: LoginLoader?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        loginUseCase.login()
+        loginUseCase?.login()
     }
 }
